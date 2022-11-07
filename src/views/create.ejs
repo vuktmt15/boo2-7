@@ -44,7 +44,9 @@
                 class="form-control"
                 id="name__input"
                 name="name"
+                required
               />
+              <h6 class="text-danger error-name"></h6>
             </div>
             <div class="mb-3">
               <label for="email__input" class="form-label">Email</label>
@@ -53,9 +55,11 @@
                 class="form-control"
                 id="email__input"
                 name="email"
+                required
               />
+              <h6 class="text-danger error-email"></h6>
             </div>
-            <div class="mb-3 mt-4">
+            <div class="mb-3 mt-4 required-checkbox-gender">
               <label
                 for="email__input"
                 class="form-label"
@@ -85,7 +89,8 @@
                 >
               </div>
             </div>
-            <div class="mb-3 mt-4">
+            <h6 class="text-danger error-gender"></h6>
+            <div class="mb-3 mt-4 required-checkbox-status">
               <label
                 for="email__input"
                 class="form-label"
@@ -117,6 +122,7 @@
                 >
               </div>
             </div>
+            <h6 class="text-danger error-status"></h6>
             <button class="btn-submit" type="submit">Save</button>
           </form>
         </div>
@@ -128,5 +134,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="/validate.js"></script>
   </body>
 </html>
