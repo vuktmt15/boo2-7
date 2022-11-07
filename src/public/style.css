@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 50px;
+  background-color: rgb(33, 211, 175);
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main {
+  padding-top: 120px;
+}
+
+.item--user {
+  display: inline-block;
+  color: rgb(119, 7, 115);
+  padding: 8px 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.item--add-user {
+  padding-top: 120px;
+  color: rgb(119, 7, 115);
+  text-decoration: none;
+}
+
+.item--delete-user {
+  margin-left: 10px;
+}
+
+.main__data {
+  margin-top: 40px;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: rgb(33, 211, 175);
+  border: none;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}

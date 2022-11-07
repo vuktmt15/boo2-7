@@ -1,0 +1,23 @@
+{
+  "name": "boo2-7",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/vuktmt15/boo2-7.git",
+  "author": "Nguyễn Văn Vũ <85126015+vuktmt15@users.noreply.github.com>",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "joi": "^17.7.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.7.1",
+    "mongoose-sequence": "^5.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
