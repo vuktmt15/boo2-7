@@ -30,6 +30,15 @@
             New User
           </a>
         </div>
+
+        <% if (alerts) { %>
+        <div class="container main__alerts">
+          <div class="alert alert-success" role="alert">
+            <h6><%=alerts %> user</h6>
+          </div>
+        </div>
+        <% } %>
+
         <div class="container main__data">
           <table class="table">
             <thead class="table-dark">
@@ -76,20 +85,7 @@
       <input type="text" name="id_delete" />
     </form>
 
-    <script>
-      const btnDelete = document.querySelectorAll(".item--delete-user");
-      const formDelete = document.querySelector(".form-delete");
-      const inputIdDelete = document.querySelector(".form-delete>input");
-
-      btnDelete.forEach(function (item, index) {
-        item.onclick = function () {
-          const id = item.getAttribute("data-id");
-          inputIdDelete.value = id;
-          formDelete.action = `/${id}?_method=DELETE`;
-          formDelete.submit();
-        };
-      });
-    </script>
+    <script src="/index.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

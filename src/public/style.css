@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.hidden-block {
+  display: none;
+}
+
 .header {
   height: 50px;
   background-color: rgb(33, 211, 175);
@@ -50,4 +54,8 @@
   height: 50px;
   font-size: 18px;
   font-weight: 600;
+}
+
+.main__alerts {
+  margin-top: 24px;
 }

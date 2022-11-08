@@ -8,7 +8,10 @@ class UserController {
   index(req, res, next) {
     User.find({})
       .then((users) => {
-        res.render("index", { users: mutilpleMongooseToObject(users) });
+        res.render("index", {
+          users: mutilpleMongooseToObject(users),
+          alerts: req.query.alerts,
+        });
       })
       .catch(next);
   }
@@ -20,7 +23,9 @@ class UserController {
     const newUser = new User(dataUser);
     newUser
       .save()
-      .then(() => res.redirect("/"))
+      .then(() => {
+        res.redirect("/?alerts=Created");
+      })
       .catch(next);
   }
   edit(req, res, next) {
@@ -35,12 +40,12 @@ class UserController {
   update(req, res, next) {
     const dataUser = req.body;
     User.updateOne({ _id: req.params.id }, dataUser)
-      .then(() => res.redirect("/"))
+      .then(() => res.redirect("/?alerts=Updated"))
       .catch(next);
   }
   destroy(req, res, next) {
     User.deleteOne({ _id: req.params.id })
-      .then(() => res.redirect("back"))
+      .then(() => res.redirect("/?alerts=Deleted"))
       .catch(next);
   }
 }

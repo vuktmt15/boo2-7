@@ -1,4 +1,5 @@
 const express = require("express");
+const flash = require("express-flash");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
